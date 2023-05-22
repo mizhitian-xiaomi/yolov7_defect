@@ -1,0 +1,20 @@
+# Train/val/test sets as
+#1) dir: path/to/imgs,
+#2) file: path/to/imgs.txt, or
+#3) list: [path/to/imgs1, path/to/imgs2, ..]
+
+train: /run/media/cv/d/mzt/dataset/filter/funnel_paper/top/yolov5/train.txt  # convert_voc.py生成的train.txt的路径
+val: /run/media/cv/d/mzt/dataset/filter/funnel_paper/top/yolov5/val.txt   # convert_voc.py生成的val.txt的路径
+test: /run/media/cv/d/mzt/dataset/filter/funnel_paper/top/yolov5/test.txt   # convert_voc.py生成的test.txt的路径
+
+# number of classes
+nc: 2
+
+# class names
+names: [ 'layer_1','layer_3' ]
+
+# train p5 models
+#nohup python train.py --device 0,1,2,3 --sync-bn --batch-size 32 --data data/filter_model1.yaml --cfg cfg/training/yolov7-tiny.yaml --weights weights/yolov7.pt --name 59-model1_20221103 --hyp data/hyp.scratch.tiny_filter.yaml --image-weights &
+
+# train p6 models
+#python train_aux.py --workers 8 --device 0,1,2,3,4,5,6,7 --sync-bn --batch-size 128 --data data/coco.yaml --img 1280 1280 --cfg cfg/training/yolov7-w6.yaml --weights '' --name yolov7-w6 --hyp data/hyp.scratch.p6.yaml

@@ -1,0 +1,27 @@
+
+train: /home/mzt/dataset/co2/front/yolo/train.txt  # convert_voc.py生成的train.txt的路径
+val: /home/mzt/dataset/co2/front/yolo/val.txt   # convert_voc.py生成的val.txt的路径
+test: /home/mzt/dataset/co2/front/yolo/test.txt   # convert_voc.py生成的test.txt的路径
+
+# number of classes
+nc: 17
+
+names: [
+    'conical_flask_off',
+    'conical_flask_on',
+    'gas_jar_cover',
+    'gas_jar_nocover',
+    'bottle_cap',
+    'bottle_nocap',
+    'green_line',
+    'bottle_cap_on',
+    'bottle_cap_off',
+    'long_funnel',
+    '90_pipe',
+    'gas_guide_tube',
+    'wood_strip_off',
+    'wood_strip_on',
+    'tweezer',
+    'alcohol_lamp_off',
+    'alcohol_lamp_on'
+]

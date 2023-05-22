@@ -1,0 +1,37 @@
+
+  train: /home/mzt/dataset/化学氧气加过滤/20221122/front/yolo/train.txt  # convert_voc.py生成的train.txt的路径
+  val: /home/mzt/dataset/化学氧气加过滤/20221122/front/yolo/val.txt   # convert_voc.py生成的val.txt的路径
+  test: /home/mzt/dataset/化学氧气加过滤/20221122/front/yolo/test.txt   # convert_voc.py生成的test.txt的路径
+  # number of classes
+  nc: 27
+
+  # class names
+  names: [ 
+  "g_50_beaker",
+  "g_100_beaker",
+  "g_500_beaker",
+  "g_funnel_unpaper",
+  "g_funnel_paper",
+  "g_glass_rod",
+  "g_bottle_washing",
+  "g_iron_hoop",
+  "g_iron_supporting",
+  "g_iron_base",
+  "g_tube_clamp",
+  "g_tube_plug",
+  "g_tube_noplug",
+  "g_pipe",
+  "g_gas_guide_tube",
+  "g_gas_jar_cover",
+  "g_gas_jar_nocover",
+  "g_gas_jar_cover_d",
+  "g_gas_jar_nocover_d",
+  "g_ground_glass_sheet",
+  "g_sink",
+  "g_flame",
+  "g_alcohol_lamp_off",
+  "g_alcohol_lamp_on",
+  "g_alcohol_lamp_cap",
+  "g_lab_jack",
+  "g_tube_hand"
+  ]

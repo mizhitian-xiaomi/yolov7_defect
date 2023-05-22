@@ -1,0 +1,16 @@
+# Train/val/test sets as
+#1) dir: path/to/imgs,
+#2) file: path/to/imgs.txt, or
+#3) list: [path/to/imgs1, path/to/imgs2, ..]
+
+train: /home/mzt/dataset/NEU-DET/yolo/train.txt  # convert_voc.py生成的train.txt的路径
+val: /home/mzt/dataset/NEU-DET/yolo/val.txt   # convert_voc.py生成的val.txt的路径
+test: /home/mzt/dataset/NEU-DET/yolo/test.txt   # convert_voc.py生成的test.txt的路径
+
+# number of classes
+nc: 6
+
+# class names
+names: [ 'rolled-in_scale', 'patches', 'crazing', 'pitted_surface', 'inclusion', 'scratches' ]
+
+#python train.py --device 0,1,2,3 --sync-bn --batch-size 32 --data data/NEU-DET.yaml --img 200 200 --cfg cfg/training/yolov7.yaml --weights yolov7.pt --hyp data/hyp.scratch.p5.yaml

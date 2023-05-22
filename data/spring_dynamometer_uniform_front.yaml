@@ -1,0 +1,23 @@
+# Train/val/test sets as
+#1) dir: path/to/imgs,
+#2) file: path/to/imgs.txt, or
+#3) list: [path/to/imgs1, path/to/imgs2, ..]
+
+train: /home/mzt/dataset/弹簧测力计匀速直线/front/yolo/train.txt  # convert_voc.py生成的train.txt的路径
+val: /home/mzt/dataset/弹簧测力计匀速直线/front/yolo/val.txt   # convert_voc.py生成的val.txt的路径
+test: /home/mzt/dataset/弹簧测力计匀速直线/front/yolo/test.txt   # convert_voc.py生成的test.txt的路径
+# number of classes
+nc: 4
+
+# class names
+names: [ 
+    "spring_dynamometer",
+    "hook_code",
+    "big_hook_code",
+    "scale_bar" ]
+
+# train p5 models
+# nohup python train.py --device 1,2,3 --cfg cfg/training/yolov7-tiny.yaml --batch-size 33 --name 45-spring_dynamometer_uniform_front-_20230105 --weights weights/yolov7.pt --sync-bn  --data data/spring_dynamometer_uniform_front.yaml  --hyp data/hyp.scratch.p5.yaml --image-weights &
+
+# train p6 models
+#python train_aux.py --workers 8 --device 0,1,2,3,4,5,6,7 --sync-bn --batch-size 128 --data data/coco.yaml --img 1280 1280 --cfg cfg/training/yolov7-w6.yaml --weights '' --name yolov7-w6 --hyp data/hyp.scratch.p6.yaml

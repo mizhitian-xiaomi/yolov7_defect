@@ -1,0 +1,21 @@
+
+train: /home/mzt/dataset/lvcai/lvcai_data/yolo/train.txt  # convert_voc.py生成的train.txt的路径
+val: /home/mzt/dataset/lvcai/lvcai_data/yolo/val.txt   # convert_voc.py生成的val.txt的路径
+test: /home/mzt/dataset/lvcai/lvcai_data/yolo/test_0422.txt   # convert_voc.py生成的test.txt的路径
+
+# number of classes
+nc: 10
+
+# class names
+names: [
+    '不导电',          
+    '喷流' ,          
+    '擦花' ,           
+    '杂色' ,           
+    '桔皮' ,          
+    '漆泡' ,          
+    '漏底' ,       
+    '脏点' ,      
+    '角位漏底' ,  
+    '起坑'
+]

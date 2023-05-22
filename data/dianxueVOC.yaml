@@ -1,0 +1,21 @@
+# Train/val/test sets as
+#1) dir: path/to/imgs,
+#2) file: path/to/imgs.txt, or
+#3) list: [path/to/imgs1, path/to/imgs2, ..]
+
+train: /home/mzt/dataset/dianxue/top/yolov5/train.txt  # convert_voc.py生成的train.txt的路径
+val: /home/mzt/dataset/dianxue/top/yolov5/val.txt   # convert_voc.py生成的val.txt的路径
+test: /home/mzt/dataset/dianxue/top/yolov5/test.txt   # convert_voc.py生成的test.txt的路径
+# number of classes
+nc: 20
+
+# class names
+names: [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+         '11', '12', '13', '14', '15', '16', '17', '18', '19' ]
+
+# train p5 models
+#python train.py --device 0,1,2,3 --sync-bn --batch-size 32 --data data/dianxueVOC.yaml --img 640 640 --cfg cfg/training/yolov7.yaml --weights yolov7.pt --hyp data/hyp.scratch.p5.yaml
+#nohup python train.py --device 1,2,3 --sync-bn --batch-size 18 --data data/dianxueVOC.yaml --cfg cfg/training/yolov7-e6.yaml --weights weights/yolov7-e6.pt --name dianxue_20221021 --hyp data/hyp.scratch.p5_dianxue.yaml --image-weights &
+
+# train p6 models
+#python train_aux.py --workers 8 --device 0,1,2,3,4,5,6,7 --sync-bn --batch-size 128 --data data/coco.yaml --img 1280 1280 --cfg cfg/training/yolov7-w6.yaml --weights '' --name yolov7-w6 --hyp data/hyp.scratch.p6.yaml

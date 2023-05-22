@@ -1,0 +1,25 @@
+train: /home/mzt/dataset/结晶/front/yolo/train.txt
+val: /home/mzt/dataset/结晶/front/yolo/val.txt
+test: /home/mzt/dataset/结晶/front/yolo/test.txt
+
+nc: 17
+
+names: [
+  'iron_hoop',
+  'iron_supporting',
+  'flame',
+  'alcohol_lamp_off',
+  'alcohol_lamp_on',
+  'alcohol_lamp_cap',
+  'glass_rod',
+  'beaker',
+  'evaporating_dish',
+  'wide_bottle_cap',
+  'wide_bottle_nocap',
+  'bottle_cap_on',
+  'bottle_cap_down',
+  'crucible_clamp',
+  'igniter',
+  'spoon',
+  'asbestos_gauge',
+]
