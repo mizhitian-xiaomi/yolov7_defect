@@ -26,7 +26,7 @@
 /logging/
 /.vscode/
 /__pycache__/
-
+*.out
 
 storage.googleapis.com
 runs/*
