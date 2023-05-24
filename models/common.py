@@ -11,6 +11,7 @@ import torch.nn.functional as F
 from torchvision.ops import DeformConv2d
 from PIL import Image
 from torch.cuda import amp
+from models.sk import SKAttention
 
 from utils.datasets import letterbox
 from utils.general import non_max_suppression, make_divisible, scale_coords, increment_path, xyxy2xywh
@@ -61,6 +62,14 @@ class Concat(nn.Module):
     def forward(self, x):
         return torch.cat(x, self.d)
 
+class Concat_Att(nn.Module):
+    def __init__(self, channel, dimension=1):
+        super(Concat_Att, self).__init__()
+        self.d = dimension
+        self.att = SKAttention(channel)
+
+    def forward(self, x):
+        return self.att(torch.cat(x, self.d))
 
 class Chuncat(nn.Module):
     def __init__(self, dimension=1):

@@ -792,6 +792,9 @@ def parse_model(d, ch):  # model_dict, input_channels(3)
             args = [ch[f]]
         elif m is Concat:
             c2 = sum([ch[x] for x in f])
+        elif m is Concat_Att:
+            c2 = sum([ch[x] for x in f])
+            args = [c2]
         elif m is Chuncat:
             c2 = sum([ch[x] for x in f])
         elif m is Shortcut:
